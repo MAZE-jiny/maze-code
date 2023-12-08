@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-maze",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "for code fomating in maze",
   "homepage": "https://github.com/MAZE-jiny/maze-code.git",
   "main": "index.js",
