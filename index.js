@@ -1,5 +1,13 @@
 module.exports = {
   extends: [
+    'prettier',
+    'airbnb',
+    'airbnb/hooks',
+    'airbnb-typescript',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
     './eslint-config-airbnb-base/index',
     './rules/best-practices',
     './rules/errors',
@@ -15,8 +23,9 @@ module.exports = {
     es6: true,
     commonJS: true,
   },
-  plugins: ['@stylistic'],
+  plugins: ['@typescript-eslint', '@stylistic', 'react', 'prettier'],
   rules: {
+    'prettier/prettier': 'error',
     indent: ['error', 2],
     '@stylistic/indent': ['error', 2],
     '@stylistic/template-curly-spacing': ['error', 'always'],
