@@ -1,36 +1,22 @@
 module.exports = {
-  extends: [
-    'prettier',
-    'airbnb',
-    'airbnb/hooks',
-    'airbnb-typescript',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
-    './eslint-config-airbnb-base/index',
-    './rules/best-practices',
-    './rules/errors',
-    './rules/node',
-    './rules/style',
-    './rules/variables',
-    './rules/es6',
-    './rules/imports',
-  ].map(require.resolve),
   env: {
+    es2021: true,
+    node: true,
     browser: true,
     node: true,
     es6: true,
-    commonJS: true,
+    commonJS: true
   },
-  plugins: ['@typescript-eslint', '@stylistic', 'react', 'prettier'],
+  plugin: ["@stylistic"],
+  extends: ["plugin:@stylistic/eslint-recommencd", "eslint:recommended", "airbnb-base"],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
   rules: {
-    'prettier/prettier': 'error',
-    indent: ['error', 2],
-    '@stylistic/indent': ['error', 2],
     '@stylistic/template-curly-spacing': ['error', 'always'],
     '@stylistic/multiline-ternary': ['error', 'always-multiline'],
     '@stylistic/jsx-curly-spacing': [2, 'always', { objectLiterals: 'never' }],
     '@stylistic/template-curly-spacing': ['error', 'always'],
-  },
+  }
 }
