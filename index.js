@@ -13,13 +13,15 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
-    commonJS: true
+    commonJS: true,
   },
-  plugins: [
-    '@stylistic'
-  ],
+  plugins: ['@stylistic'],
   rules: {
-    'indent': ['error', 2],
-    '@stylistic/indent': ['error', 2]
-  }
+    indent: ['error', 2],
+    '@stylistic/indent': ['error', 2],
+    '@stylistic/template-curly-spacing': ['error', 'always'],
+    '@stylistic/multiline-ternary': ['error', 'always-multiline'],
+    '@stylistic/jsx-curly-spacing': [2, 'always', { objectLiterals: 'never' }],
+    '@stylistic/template-curly-spacing': ['error', 'always'],
+  },
 }
