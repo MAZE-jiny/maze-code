@@ -1,5 +1,5 @@
 {
-  "name": "eslint-maze",
+  "name": "eslint-config-maze",
   "version": "0.1.0",
   "description": "for code fomating in maze",
   "homepage": "https://github.com/MAZE-jiny/maze-code.git",
@@ -8,7 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "maze jiny",
+    "email": "binary_h@a-maze.ai"
+  },
   "license": "MIT",
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
