@@ -1,8 +1,5 @@
 module.exports = {
   rules: {
-    // 다른 연산자와 마찬가지로 나머지 또는 스프레드 연산자와 해당 연산자가 작동하는 표현식 사이에 공백이 허용X
-    "parserOptions": { "ecmaVersion": 2018 },
-
     // enforce line breaks after opening and before closing array brackets
     // https://eslint.org/docs/rules/array-bracket-newline
     // TODO: enable? semver-major
