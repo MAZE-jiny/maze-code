@@ -5,18 +5,24 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
-    commonJS: true
+    commonJS: true,
+    jest: true
   },
-  plugin: ["@stylistic"],
-  extends: ["plugin:@stylistic/eslint-recommencd", "eslint:recommended", "airbnb-base"],
+  plugin: ["prettier"],
+  extends: ["eslint:recommended", "plugin:prettier/recommended", "airbnb"],
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {
-    '@stylistic/template-curly-spacing': ['error', 'always'],
-    '@stylistic/multiline-ternary': ['error', 'always-multiline'],
-    '@stylistic/jsx-curly-spacing': [2, 'always', { objectLiterals: 'never' }],
-    '@stylistic/template-curly-spacing': ['error', 'always'],
-  }
+  overrides: [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "rules": {
+        "template-curly-spacing": ["error", "always"],
+        "prettier/prettier": ["warn", { "bracketSpacing": "ignore" }],
+        "semi": 0,
+        "arrow-parens": ["error", "as-needed"]
+      }
+    }
+  ]
 }
